@@ -1,3 +1,5 @@
+# Javier Andrés Barrios del Aguila 
+# 201801376
 def input_numero(msj=" "):
     numero =0
     while True:
