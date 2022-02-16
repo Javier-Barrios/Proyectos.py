@@ -7,7 +7,7 @@ def input_numero(msj=" "):
             numero=int(input(msj))
             break
         except ValueError:
-            print("Error, ingrese un número")
+            print("Error, ingrese un número")  
     return numero
  
 calcu = int(input("Operación a Realizar: \n 1- Suma \n 2- Resta \n 3- Multiplicación \n 4- División \n 5- Potencia \n 6- Raiz \n 0- Salir \n"))
@@ -28,10 +28,15 @@ while calcu != 0:
         mult = num1*num2
         print("La multiplicación es: ", mult, "\n")
     elif calcu == 4:
-        num1 = input_numero("Ingrese el dividendo: ")
-        num2 = input_numero("Ingrese el divisor: ")
-        div = num1/num2
-        print("La división es: ", div, "\n")
+        try: 
+            num1 = input_numero("Ingrese el dividendo: ")
+            num2 = input_numero("Ingrese el divisor: ")
+            div = num1/num2
+            print("La división es: ", div, "\n")
+        except ZeroDivisionError: 
+            print("el segundo numero no puede ser 0")
+        except:
+            print("solo puede ingresar numeros")
     elif calcu == 5:
         num1 = input_numero("Ingrese la base de la potencia: ")
         num2 = input_numero("Ingrese el exponente de la potencia: ")
@@ -45,3 +50,5 @@ while calcu != 0:
     else :
         print("Escriba una opcion correcta")
     calcu = int(input("Operación a Realizar: \n 1- Suma \n 2- Resta \n 3- Multiplicación \n 4- División \n 5- Potencia \n 6- Raiz \n 0- Salir \n"))
+
+    
