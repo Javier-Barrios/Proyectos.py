@@ -1,3 +1,6 @@
+#  Javier Andrés Barrios del Aguila 
+#  201801376
+
 import psycopg2
 
 try:
@@ -121,26 +124,3 @@ while calcu != 0:
     else :
         print("Escriba una opcion correcta")
     calcu = int(input("Operación a Realizar: \n \n 1- Suma \n 2- Resta \n 3- Multiplicación \n 4- División \n 5- Potencia \n 6- Raiz \n 7- Historial \n 0- Salir \n \n "))
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-#cursor = conexion.cursor()
-#num1 = int(input("Ingrese el sumando: "))
-#num2 = int(input("Ingrese el sumando: "))
-#suma = num1+num2
-#cursor.execute("INSERT INTO DatosCalculadora(Operacion,  Numero_1,  Numero_2, Resultado) VALUES('Suma', %s, %s, %s);",(num1, num2, suma))
-#conexion.commit()
-#cursor.close()
-#conexion.close()
