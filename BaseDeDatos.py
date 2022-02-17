@@ -10,7 +10,7 @@ try:
     )
     print("conexion exitosa")
 except psycopg2.Error as e:
-    print("Error en la conexión \nverificar parametros")
+    print("Error en la conexión \nverificar parametros \n")
 
 
 
@@ -18,8 +18,8 @@ cursor = conexion.cursor()
 ope = str(input("ingrese la operacion: "))
 num1 = int(input("Ingrese el sumando: "))
 num2 = int(input("Ingrese el sumando: "))
-
-SQL = "INSERT INTO DatosCalculadora(Operacion,  Numero_1,  Numero_2, Resultado) VALUES(%s, %s, %s, 200);",(ope,num1, num2)
+suma = num1+num2
+SQL = "INSERT INTO DatosCalculadora(Operacion,  Numero_1,  Numero_2, Resultado) VALUES(%s, %s, %s, %s);",(ope,num1, num2, suma)
 cursor.execute(SQL)
 conexion.commit()
 cursor.close()

@@ -49,6 +49,6 @@ while calcu != 0:
         print("La raiz es: ", raiz, "\n") 
     else :
         print("Escriba una opcion correcta")
-    calcu = int(input("Operación a Realizar: \n 1- Suma \n 2- Resta \n 3- Multiplicación \n 4- División \n 5- Potencia \n 6- Raiz \n 0- Salir \n"))
+    calcu = int(input("Operación a Realizar: \n 1- Suma \n 2- Resta \n 3- Multiplicación \n 4- División \n 5- Potencia \n 6- Raiz \n 0- Salir \n \n"))
 
     
